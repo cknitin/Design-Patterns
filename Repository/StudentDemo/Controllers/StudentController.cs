@@ -30,8 +30,9 @@ namespace StudentDemo.Controllers
         public async Task<ActionResult> Index()
         {
             //return View(await db.Students.ToListAsync());
-            return View(await studentRepository.GetStudentList());
-            
+            //return View(await studentRepository.GetStudentList());
+            return View(genericRepository.Get());
+
         }
 
         // GET: Student/Details/5

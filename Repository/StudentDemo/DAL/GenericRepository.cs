@@ -51,6 +51,10 @@ namespace StudentDemo.DAL
             }
         }
 
+        public virtual List<TEntity> Get()
+        {
+            return dbSet.ToList();
+        }
 
         public virtual TEntity GetById(Object Id)
         {
