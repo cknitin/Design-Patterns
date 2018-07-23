@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Structured", "Structured", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Structured\Decorator\Decorator.csproj", "{002D474C-B90F-4B2B-A23B-56FF35B43335}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{FDB75BF3-BB9B-4988-BA93-3F2CA4CFB378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentDemo", "Repository\StudentDemo\StudentDemo.csproj", "{1EFD5E41-2282-42FA-A688-FF498CC4BA7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{002D474C-B90F-4B2B-A23B-56FF35B43335}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{002D474C-B90F-4B2B-A23B-56FF35B43335}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{002D474C-B90F-4B2B-A23B-56FF35B43335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EFD5E41-2282-42FA-A688-FF498CC4BA7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EFD5E41-2282-42FA-A688-FF498CC4BA7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EFD5E41-2282-42FA-A688-FF498CC4BA7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EFD5E41-2282-42FA-A688-FF498CC4BA7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,7 @@ Global
 		{5DB2D805-D789-4C4E-8361-D95229E9C3A2} = {33C4455B-BA9A-49CE-AA4B-0444E6734158}
 		{D4EA69BF-4A21-45FD-80C6-34532606231B} = {33C4455B-BA9A-49CE-AA4B-0444E6734158}
 		{002D474C-B90F-4B2B-A23B-56FF35B43335} = {8A0EEA52-E427-4015-B856-61598D5E9CF2}
+		{1EFD5E41-2282-42FA-A688-FF498CC4BA7A} = {FDB75BF3-BB9B-4988-BA93-3F2CA4CFB378}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA5B1960-4ED9-4D42-9AC3-7DEF149FF399}
