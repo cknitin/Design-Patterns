@@ -6,18 +6,22 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using StudentDemo.DAL;
 using StudentDemo.Models;
 
 namespace StudentDemo.Controllers
 {
     public class FaculityController : Controller
     {
-        private StudentDemoContext db = new StudentDemoContext();
+        //private StudentDemoContext db = new StudentDemoContext();
+
+        private UnitOfWork unitofwork = new UnitOfWork();
 
         // GET: Faculity
         public ActionResult Index()
         {
-            return View(db.Faculities.ToList());
+            //return View(db.Faculities.ToList());
+            return View(unitofwork.FaculityRepository.Get());
         }
 
         // GET: Faculity/Details/5
@@ -27,7 +31,10 @@ namespace StudentDemo.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Faculity faculity = db.Faculities.Find(id);
+            //Faculity faculity = db.Faculities.Find(id);
+
+            Faculity faculity = unitofwork.FaculityRepository.GetById(id);
+
             if (faculity == null)
             {
                 return HttpNotFound();
@@ -50,8 +57,11 @@ namespace StudentDemo.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Faculities.Add(faculity);
-                db.SaveChanges();
+                //db.Faculities.Add(faculity);
+                //db.SaveChanges();
+                unitofwork.FaculityRepository.Insert(faculity);
+                unitofwork.Save();
+
                 return RedirectToAction("Index");
             }
 
@@ -65,7 +75,9 @@ namespace StudentDemo.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Faculity faculity = db.Faculities.Find(id);
+            //Faculity faculity = db.Faculities.Find(id);
+
+            Faculity faculity = unitofwork.FaculityRepository.GetById(id);
             if (faculity == null)
             {
                 return HttpNotFound();
@@ -82,8 +94,11 @@ namespace StudentDemo.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(faculity).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.Entry(faculity).State = EntityState.Modified;
+                //db.SaveChanges();
+                unitofwork.FaculityRepository.Update(faculity);
+                unitofwork.Save();
+
                 return RedirectToAction("Index");
             }
             return View(faculity);
@@ -96,7 +111,8 @@ namespace StudentDemo.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Faculity faculity = db.Faculities.Find(id);
+            //Faculity faculity = db.Faculities.Find(id);
+            Faculity faculity = unitofwork.FaculityRepository.GetById(id);
             if (faculity == null)
             {
                 return HttpNotFound();
@@ -109,9 +125,13 @@ namespace StudentDemo.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Faculity faculity = db.Faculities.Find(id);
-            db.Faculities.Remove(faculity);
-            db.SaveChanges();
+            //Faculity faculity = db.Faculities.Find(id);
+            //db.Faculities.Remove(faculity);
+            //db.SaveChanges();
+
+            Faculity faculity = unitofwork.FaculityRepository.GetById(id);
+            unitofwork.FaculityRepository.Update(faculity);
+            unitofwork.Save();
             return RedirectToAction("Index");
         }
 
@@ -119,7 +139,8 @@ namespace StudentDemo.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                //db.Dispose();
+                unitofwork.Dispose();
             }
             base.Dispose(disposing);
         }

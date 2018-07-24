@@ -66,6 +66,11 @@ namespace StudentDemo.DAL
             dbSet.Add(entity);
         }
 
+        public virtual void Save()
+        {
+
+        }
+
         public virtual void Update(TEntity entityToUpdate)
         {
             dbSet.Attach(entityToUpdate);
