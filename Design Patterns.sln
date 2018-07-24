@@ -21,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentDemo", "Repository\StudentDemo\StudentDemo.csproj", "{1EFD5E41-2282-42FA-A688-FF498CC4BA7A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Behavioral", "Behavioral", "{7C42AE32-4E94-4CD5-9B36-69EA6F6FADC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Behavioral\Iterator\Iterator.csproj", "{00ADCFB8-AB56-4B3E-B667-9A4A9F70D53D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,10 @@ Global
 		{1EFD5E41-2282-42FA-A688-FF498CC4BA7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EFD5E41-2282-42FA-A688-FF498CC4BA7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EFD5E41-2282-42FA-A688-FF498CC4BA7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00ADCFB8-AB56-4B3E-B667-9A4A9F70D53D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00ADCFB8-AB56-4B3E-B667-9A4A9F70D53D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00ADCFB8-AB56-4B3E-B667-9A4A9F70D53D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00ADCFB8-AB56-4B3E-B667-9A4A9F70D53D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +70,7 @@ Global
 		{D4EA69BF-4A21-45FD-80C6-34532606231B} = {33C4455B-BA9A-49CE-AA4B-0444E6734158}
 		{002D474C-B90F-4B2B-A23B-56FF35B43335} = {8A0EEA52-E427-4015-B856-61598D5E9CF2}
 		{1EFD5E41-2282-42FA-A688-FF498CC4BA7A} = {FDB75BF3-BB9B-4988-BA93-3F2CA4CFB378}
+		{00ADCFB8-AB56-4B3E-B667-9A4A9F70D53D} = {7C42AE32-4E94-4CD5-9B36-69EA6F6FADC1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA5B1960-4ED9-4D42-9AC3-7DEF149FF399}
