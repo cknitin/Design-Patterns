@@ -9,11 +9,9 @@ namespace AbstractFactory
     public interface ISavingAccount
     {
     }
-
     public interface ILoanAccount
     {
     }
-
     public class CITISavingAccount : ISavingAccount
     {
         public CITISavingAccount()
@@ -37,7 +35,6 @@ namespace AbstractFactory
             Console.WriteLine("This is National Saving Account.");
         }
     }
-
     public class NationalLoanAccount : ILoanAccount
     {
         public NationalLoanAccount()
@@ -45,13 +42,11 @@ namespace AbstractFactory
             Console.WriteLine("This is National Loan Account.");
         }
     }
-
     public interface ICreditUnionFactory
     {
         ILoanAccount CreateLoanAccount();
         ISavingAccount CreateSavingAccount();
     }
-
     public class CITICreditUnionFactory : ICreditUnionFactory
     {
         public ILoanAccount CreateLoanAccount()
@@ -63,7 +58,6 @@ namespace AbstractFactory
             return new CITISavingAccount();
         }
     }
-
     public class NationalCreditUnionFactory : ICreditUnionFactory
     {
         public ILoanAccount CreateLoanAccount()
@@ -76,7 +70,6 @@ namespace AbstractFactory
             return new NationalSavingAccount();
         }
     }
-
     public class CreditUnionFactoryProvider
     {
         public static ICreditUnionFactory GetCreditUnionFactroy(string accountNo)
@@ -112,8 +105,6 @@ namespace AbstractFactory
                 factory.CreateSavingAccount();
 
             }
-
-
             Console.ReadLine();
         }
     }

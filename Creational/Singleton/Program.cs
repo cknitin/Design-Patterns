@@ -10,10 +10,7 @@ namespace Singleton
     {
         private int policyNo { get; set; } = 12345;
         private string Insured { get; set; } = "Peter Parker";
-
         public string GetInsuredName() => Insured;
-
-
         //private static Policy _instance;
 
         // Not Thread safe
@@ -33,7 +30,6 @@ namespace Singleton
         //private static readonly object _lock = new object();
         //public static Policy Instance
         //{
-
         //    get
         //    {
         //        lock (_lock)
@@ -59,7 +55,6 @@ namespace Singleton
             }
         }
     }
-
     class Program
     {
         static void Main(string[] args)
