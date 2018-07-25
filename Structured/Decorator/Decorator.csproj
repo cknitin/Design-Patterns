@@ -55,5 +55,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Decorator-img.PNG" />
+    <Content Include="Decorator.jpg" />
+    <Content Include="Wrapper.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
