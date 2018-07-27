@@ -11,20 +11,20 @@ namespace Singleton
         private int policyNo { get; set; } = 12345;
         private string Insured { get; set; } = "Peter Parker";
         public string GetInsuredName() => Insured;
-        //private static Policy _instance;
+        private static Policy _instance;
 
         // Not Thread safe
-        //public static Policy Instance
-        //{
-        //    get
-        //    {
-        //        if (_instance == null)
-        //        {
-        //            _instance = new Policy();
-        //        }
-        //        return _instance;
-        //    }
-        //}
+        public static Policy Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new Policy();
+                }
+                return _instance;
+            }
+        }
 
         // Thread Safe
         //private static readonly object _lock = new object();
@@ -43,17 +43,41 @@ namespace Singleton
         //    }
         //}
 
-        // Even Better Approch
-        private static readonly Policy _instance = new Policy();
+        // Double check & Thread Safe 
+        // private static readonly object _lock = new object();
+        //public static Policy Instance
+        //{
 
-        private static readonly object _lock = new object();
-        public static Policy Instance
-        {
-            get
-            {
-                    return _instance;
-            }
-        }
+        //    get
+        //    {
+        //        if (_instance == null)
+        //        {
+        //            lock (_lock)
+        //            {
+        //                if (_instance == null)
+        //                {
+        //                    _instance = new Policy();
+        //                }
+
+        //            }
+        //        }
+        //        return _instance;
+        //    }
+
+        //}
+
+
+        // Even Better Approch
+        //private static readonly Policy _instance = new Policy();
+
+        //private static readonly object _lock = new object();
+        //public static Policy Instance
+        //{
+        //    get
+        //    {
+        //            return _instance;
+        //    }
+        //}
     }
     class Program
     {
