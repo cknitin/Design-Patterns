@@ -31,6 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Singleton_", "Singleton_", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PPT", "PPT", "{1AA062ED-3941-4907-A0BE-4C2F5C056579}"
 	ProjectSection(SolutionItems) = preProject
+		\\MCNSERVER2\UserProfiles\nkumar\Desktop\Design Patterns - Friday 2.ppt = \\MCNSERVER2\UserProfiles\nkumar\Desktop\Design Patterns - Friday 2.ppt
 		\\MCNSERVER2\UserProfiles\nkumar\Desktop\Design Patterns - Friday.pptx = \\MCNSERVER2\UserProfiles\nkumar\Desktop\Design Patterns - Friday.pptx
 	EndProjectSection
 EndProject
