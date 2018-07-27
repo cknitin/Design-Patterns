@@ -8,7 +8,7 @@ namespace Singleton
 {
     public class Policy
     {
-        private int policyNo { get; set; } = 12345;
+        private int PolicyNo { get; set; } = 12345;
         private string Insured { get; set; } = "Peter Parker";
         public string GetInsuredName() => Insured;
 

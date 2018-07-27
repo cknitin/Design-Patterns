@@ -29,6 +29,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Behavioral\Obse
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Singleton_", "Singleton_", "{40F713B5-1124-4724-B5BF-55E2CCD00EC5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PPT", "PPT", "{1AA062ED-3941-4907-A0BE-4C2F5C056579}"
+	ProjectSection(SolutionItems) = preProject
+		\\MCNSERVER2\UserProfiles\nkumar\Desktop\Design Patterns - Friday.pptx = \\MCNSERVER2\UserProfiles\nkumar\Desktop\Design Patterns - Friday.pptx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
