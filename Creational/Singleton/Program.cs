@@ -11,9 +11,9 @@ namespace Singleton
         private int policyNo { get; set; } = 12345;
         private string Insured { get; set; } = "Peter Parker";
         public string GetInsuredName() => Insured;
-        private static Policy _instance;
 
-        // Not Thread safe
+        #region Basic approch
+        private static Policy _instance;
         public static Policy Instance
         {
             get
@@ -25,8 +25,13 @@ namespace Singleton
                 return _instance;
             }
         }
+        #endregion
 
-        // Thread Safe
+
+        #region other approch
+
+        #region Thread Safe
+        // private static Policy _instance;
         //private static readonly object _lock = new object();
         //public static Policy Instance
         //{
@@ -42,8 +47,10 @@ namespace Singleton
         //        }
         //    }
         //}
+        #endregion
 
-        // Double check & Thread Safe 
+        #region Double check & Thread Safe 
+        //private static Policy _instance;
         // private static readonly object _lock = new object();
         //public static Policy Instance
         //{
@@ -65,19 +72,34 @@ namespace Singleton
         //    }
 
         //}
+        #endregion
 
-
-        // Even Better Approch
+        #region Even Better Approch
         //private static readonly Policy _instance = new Policy();
-
-        //private static readonly object _lock = new object();
         //public static Policy Instance
         //{
         //    get
         //    {
-        //            return _instance;
+        //        return _instance.Value;
         //    }
         //}
+        #endregion
+
+        #region Lazy Initialization 
+        //private static readonly Lazy<Policy> _instance = new Lazy<Policy>(() => new Policy());
+
+        //public static Policy Instance
+        //{
+        //    get
+        //    {
+        //        return _instance.Value;
+        //    }
+        //}
+
+        #endregion
+
+        #endregion
+
     }
     class Program
     {
